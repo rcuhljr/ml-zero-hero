@@ -163,6 +163,12 @@ print(newb)
 for i in range(10):
     print(Value(1.0) / Value(2.0))
 
+testa = Value(3.0)
+testb = Value(4.0)
+testc = testa*testb
+print(testc)
+testa.data = 2.0
+print(testc)
 
 # import torch
 
