@@ -85,7 +85,7 @@ for k in range(100):
   logits = W.index_select(0, xs)
   counts = logits.exp() # counts, equivalent to N
   probs = counts / counts.sum(1, keepdims=True) # probabilities for next character
-  loss = -probs[torch.arange(num), ys].log().mean() + 0.01*(W**2).mean()
+  loss = -probs[torch.arange(num), ys].log().mean() + 0.0005*(W**2).mean()
   if k % 10 == 0:
     print(loss.item())
 

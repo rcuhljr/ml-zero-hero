@@ -16,6 +16,10 @@ for word in raw_words:
     test_words.append(word)
 
 
+print(len(training_words)/(len(raw_words)))
+print(len(dev_words)/len(raw_words))
+print(len(test_words)/len(raw_words))
+
 N = torch.zeros((27, 27), dtype=torch.int32)
 
 chars = sorted(list(set(''.join(training_words))))
@@ -129,7 +133,7 @@ print(f'{nll=}')
 print(f'{nll/n}')
 
 
-P = (N+0.1).float()
+P = (N+0.2).float()
 P /= P.sum(1, keepdims=True)
 
 log_likelihood = 0.0
