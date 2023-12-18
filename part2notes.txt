@@ -1,0 +1,3 @@
+Paper page 15, out of vocabulary word integration into models.
+
+What if we seeded initial probability weights off bi/trigram for preceding characters? How much of an advantage is there to being close?
